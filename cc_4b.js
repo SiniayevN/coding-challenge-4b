@@ -8,9 +8,9 @@ let products = [
 //Step 2 done 
 
 
-for (let products of products) {
+for (let product of products) {
     let discount =0;
-    switch (products.category) {
+    switch (product.category) {
 
         case "Fruit":
             discount = .2; 
@@ -25,7 +25,12 @@ for (let products of products) {
             break;
     }
     //Promoprice integration for all products
-    let promoPrice = products.price * (1 - discount);
-    console.log(`The promo price for ${products.name} is $${promoPrice.toFixed(2)}`);
+    let promoPrice = product.price * (1 - discount);
+    product.promoPrice = promoPrice;
+    console.log(`The promo price for ${product.name} is $${promoPrice.toFixed(2)}`);
 
 }
+
+//step 3 done
+
+switch (customerType)

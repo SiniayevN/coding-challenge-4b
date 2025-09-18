@@ -7,18 +7,25 @@ let products = [
 ];
 //Step 2 done 
 
-let discount =0;
+
 for (let products of products) {
+    let discount =0;
     switch (products.category) {
+
         case "Fruit":
             discount = .2; 
             break;
+
         case "Vegetable":
             discount = .15;
             break;
+
         case "Meat":
             discount = .1; 
             break;
     }
-    
+    //Promoprice integration for all products
+    let promoPrice = products.price * (1 - discount);
+    console.log(`The promo price for ${products.name} is $${promoPrice.toFixed(2)}`);
+
 }
